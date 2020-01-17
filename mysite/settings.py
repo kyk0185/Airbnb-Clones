@@ -38,10 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #My Apps
+    # My Apps
     'django_countries',
+    'django_seed',
     'rooms.apps.RoomsConfig',
     'users.apps.UsersConfig',
+    'reviews.apps.ReviewsConfig',
+    'reservations.apps.ReservationsConfig',
+    'lists.apps.ListsConfig',
+    'conversations.apps.ConversationsConfig',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +128,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = 'uploads/'
+MEDIA_URL = os.path.join(BASE_DIR, 'uploads/')
